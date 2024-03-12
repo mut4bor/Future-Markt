@@ -1,0 +1,51 @@
+@import 'shared/constants/vars';
+
+@media (min-width: $pageWidth320) {
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 60.8rem;
+    margin: 0 1rem 0 auto;
+  }
+
+  .toggleList {
+    background: transparent;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .svg {
+    height: 100%;
+    aspect-ratio: 1;
+  }
+
+  .list {
+    display: none;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .link {
+    color: $whiteColor;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}
+@media (min-width: $pageWidth1024) {
+  .navigation {
+    flex: 1 0 auto;
+    margin: 0;
+  }
+  .svg {
+    display: none;
+  }
+  .list {
+    display: flex;
+  }
+}

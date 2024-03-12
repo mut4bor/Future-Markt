@@ -1,0 +1,145 @@
+@import 'shared/constants/vars';
+
+@mixin transition {
+  transition: 0.3s ease-in-out;
+}
+@mixin textContainer {
+  background: $whiteColor;
+  border: 0.1rem solid $whiteColor;
+  border-right: 0.2rem solid $blueColor;
+}
+@mixin textContainerOutlined {
+  background: transparent;
+  border: 0.1rem solid $whiteColor;
+  border-right: 0.2rem solid $whiteColor;
+}
+@mixin text {
+  color: $blueColor;
+}
+@mixin textOutlined {
+  color: $whiteColor;
+}
+@mixin arrowContainer {
+  background: $whiteColor;
+}
+@mixin arrowContainerOutlined {
+  background: transparent;
+}
+@mixin svg {
+  stroke: $blueColor;
+}
+@mixin svgOutlined {
+  stroke: $whiteColor;
+}
+
+@media (min-width: $pageWidth320) {
+  .button {
+    display: flex;
+    flex-direction: row;
+    // width: 50%;
+    height: 7rem;
+    background: transparent;
+    margin-top: 1rem;
+    &:hover {
+      .textContainer {
+        @include textContainerOutlined;
+        &.outlined {
+          @include textContainer;
+        }
+      }
+      .mobileText,
+      .desktopText {
+        @include textOutlined;
+        &.outlined {
+          @include text;
+        }
+      }
+      .arrowContainer {
+        @include arrowContainerOutlined;
+        &.outlined {
+          @include arrowContainer;
+        }
+      }
+      .svg {
+        path {
+          @include svgOutlined;
+        }
+        &.outlined {
+          path {
+            @include svg;
+          }
+        }
+      }
+    }
+  }
+
+  .textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    @include transition;
+    @include textContainer;
+    &.outlined {
+      @include textContainerOutlined;
+    }
+  }
+  .mobileText {
+    display: block;
+  }
+
+  .desktopText {
+    display: none;
+  }
+  .mobileText,
+  .desktopText {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    @include transition;
+    @include text;
+    &.outlined {
+      @include textOutlined;
+    }
+  }
+
+  .arrowContainer {
+    height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 1rem;
+    border: 0.1rem solid $whiteColor;
+    border-left: none;
+    @include transition;
+    @include arrowContainer;
+    &.outlined {
+      @include arrowContainerOutlined;
+    }
+  }
+
+  .svg {
+    width: 2rem;
+    height: 2rem;
+    path {
+      stroke-width: 2px;
+      @include transition;
+      @include svg;
+    }
+    &.outlined {
+      path {
+        @include svgOutlined;
+      }
+    }
+  }
+}
+@media (min-width: $pageWidth1024) {
+  .mobileText {
+    display: none;
+  }
+  .desktopText {
+    display: block;
+  }
+}

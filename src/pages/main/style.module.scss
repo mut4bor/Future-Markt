@@ -1,0 +1,9 @@
+@import 'shared/constants/vars';
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 $containerPaddingX;
+  height: calc(100vh - $headerHeight);
+}

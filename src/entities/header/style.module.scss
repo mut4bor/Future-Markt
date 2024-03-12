@@ -1,0 +1,26 @@
+@import 'shared/constants/vars';
+
+@media (min-width: $pageWidth320) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: $headerHeight;
+    padding: 0 $containerPaddingX;
+  }
+  .container {
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: unset;
+
+    align-items: center;
+    font-size: 1.6rem;
+    max-width: $containerWidth;
+  }
+}
+@media (min-width: $pageWidth1024) {
+  .container {
+    justify-content: space-between;
+  }
+}
