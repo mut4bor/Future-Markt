@@ -9,7 +9,7 @@ export function ConsultationButton(props: ConsultationButtonProps) {
   } = props;
 
   const handleClass = (defaultClass: string) => {
-    return `${defaultClass} ${type === 'outlined' ? styles.outlined : ''}`;
+    return `${defaultClass} ${type === 'contained' ? styles.contained : ''}`;
   };
 
   return (
@@ -18,16 +18,13 @@ export function ConsultationButton(props: ConsultationButtonProps) {
       type="button"
       onClick={onClick}
     >
-      <div className={handleClass(styles.textContainer)}>
-        <p className={handleClass(styles.mobileText)}>{mobile}</p>
-        <p className={handleClass(styles.desktopText)}>{desktop}</p>
+      <div className={styles.textContainer}>
+        <p className={styles.mobileText}>{mobile}</p>
+        <p className={styles.desktopText}>{desktop}</p>
       </div>
-      <div className={handleClass(styles.arrowContainer)}>
-        <svg
-          className={handleClass(styles.svg)}
-          viewBox="0 0 22 22"
-          fill="none"
-        >
+      <span className={styles.hr}></span>
+      <div className={styles.arrowContainer}>
+        <svg className={styles.svg} viewBox="0 0 22 22" fill="none">
           <path d="M21 4.29346V20.952H4.37326M20.9618 21L1 1" />
         </svg>
       </div>

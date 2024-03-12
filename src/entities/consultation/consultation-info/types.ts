@@ -1,4 +1,7 @@
 export type ConsultationInfoProps = {
   heading: string;
-  subheading: string;
+  subheading: {
+    mobile: string;
+    desktop: string;
+  };
 };

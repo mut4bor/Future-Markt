@@ -8,7 +8,10 @@ export function Consultation() {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.consultation}>
-          <h1 className={styles.heading}>Создаю условия для вашего успеха</h1>
+          <h1 className={styles.heading}>
+            Создаю условия <br /> для вашего
+            <br /> успеха
+          </h1>
           <h3 className={styles.subheading}>
             <p className={styles.desktopSubheadingText}>
               Когда ваше время и энергия лучше сфокусированы, стремление к новым
@@ -16,7 +19,7 @@ export function Consultation() {
               действий
             </p>
             <p className={styles.mobileSubheadingText}>
-              Ваш успех зависит от ваших действий
+              Ваш успех зависит от ваших <br /> действий
             </p>
           </h3>
 
@@ -43,15 +46,21 @@ export function Consultation() {
         <div className={styles.info}>
           <ConsultationInfo
             heading="130+"
-            subheading="техник для достижения целей"
+            subheading={{
+              mobile: 'техники',
+              desktop: 'техник для достижения целей',
+            }}
           />
           <ConsultationInfo
             heading="250%"
-            subheading="увеличение личной продуктивности"
+            subheading={{
+              mobile: 'продуктивности',
+              desktop: 'увеличение личной продуктивности',
+            }}
           />
         </div>
       </div>
-      {/* <img className={styles.image} src={mentor} alt="Ментор" /> */}
+      <img className={styles.image} src={mentor} alt="Ментор" />
     </div>
   );
 }

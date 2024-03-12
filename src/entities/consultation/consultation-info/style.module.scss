@@ -1,21 +1,35 @@
 @import 'shared/constants/vars';
 
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 2.8rem;
-  padding-left: 2.4rem;
-  border-left: 0.2rem solid #ffffff60;
-  width: 38rem;
+@media (min-width: $pageWidth320) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    width: 9.8rem;
+    padding-left: 0.8rem;
+    border-left: 0.2rem solid #ffffff60;
+  }
+  .heading {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.25rem;
+  }
+  .subheadingMobile,
+  .subheadingDesktop {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: $whiteColor;
+    opacity: 0.5;
+  }
+  .subheadingDesktop {
+    display: none;
+  }
 }
-.heading {
-  font-family: Montserrat, sans-serif;
-  font-size: 4rem;
-  line-height: 5.65rem;
-}
-.subheading {
-  font-size: 1.6rem;
-  line-height: 1.95rem;
-  color: $whiteColor;
-  opacity: 0.5;
+@media (min-width: $pageWidth1024) {
+  .subheadingMobile {
+    display: none;
+  }
+  .subheadingDesktop {
+    display: block;
+  }
 }
