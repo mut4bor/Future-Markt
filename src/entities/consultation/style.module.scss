@@ -10,6 +10,10 @@
     position: relative;
     padding: 4.5rem 0 10rem 0;
     overflow: hidden;
+    transition: 0.3s ease-in-out;
+    &.blur {
+      filter: blur(1rem);
+    }
   }
   .wrapper {
     width: 100%;
@@ -70,6 +74,9 @@
   .container {
     padding: 13.5rem 0 10rem 0;
     min-height: calc(100svh - $headerHeight);
+  }
+  .wrapper {
+    width: 80.7rem;
   }
   .consultation {
     display: flex;

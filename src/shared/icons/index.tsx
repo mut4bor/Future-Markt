@@ -1,6 +1,27 @@
 export function Icons() {
   return (
     <svg style={{ display: 'none' }}>
+      <symbol id="cross" viewBox="0 0 21 22" fill="none">
+        <line
+          y1="-0.713531"
+          x2="26.9799"
+          y2="-0.713531"
+          transform="matrix(0.681805 0.731534 -0.681805 0.731534 1 2.26318)"
+          stroke="white"
+          strokeOpacity="0.8"
+          strokeWidth="1.42706"
+        />
+        <line
+          y1="-0.713531"
+          x2="26.9799"
+          y2="-0.713531"
+          transform="matrix(0.681805 -0.731534 0.681805 0.731534 1.60498 21.7366)"
+          stroke="white"
+          strokeOpacity="0.8"
+          strokeWidth="1.42706"
+        />
+      </symbol>
+
       <symbol id="arrow" viewBox="0 0 22 22" fill="none">
         <path
           d="M21 4.29346V20.952H4.37326M20.9618 21L1 1"

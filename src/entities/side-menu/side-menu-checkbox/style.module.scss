@@ -1,0 +1,79 @@
+@import 'shared/constants/vars';
+
+$mobileFontSize: 1.2rem;
+$mobileLineHeight: 1.6rem;
+$mobileHeight: 1.5rem;
+
+$desktopFontSize: 1.6rem;
+$desktopLineHeight: 2rem;
+$desktopHeight: 2rem;
+
+$checkboxBorderColor: #ffffff80;
+
+@media (min-width: $pageWidth320) {
+  .container {
+    margin-top: 3rem;
+  }
+  .checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    cursor: pointer;
+    + label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      cursor: pointer;
+      font-size: $mobileFontSize;
+      line-height: $mobileLineHeight;
+      color: $checkboxBorderColor;
+      transition: 0.1s ease-in-out;
+      &::before {
+        content: '';
+        display: inline-block;
+        height: $mobileHeight;
+        aspect-ratio: 1;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 0.1rem solid $checkboxBorderColor;
+        margin-right: 1.5rem;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: 60%;
+        transition: 0.1s ease-in-out;
+      }
+    }
+    &:checked + label {
+      color: $whiteColor;
+    }
+
+    &:checked + label::before {
+      border-color: $whiteColor;
+      background-color: $whiteColor;
+      background-image: url('./icons/checkmark.svg');
+    }
+
+    &:not(:disabled):not(:checked) + label:hover {
+      color: $whiteColor;
+    }
+    &:not(:disabled):not(:checked) + label:hover::before {
+      border-color: $whiteColor;
+    }
+  }
+}
+
+@media (min-width: $pageWidth1440) {
+  .container {
+    margin-top: 11rem;
+  }
+  .checkbox {
+    + label {
+      font-size: $desktopFontSize;
+      line-height: $desktopLineHeight;
+      &::before {
+        height: $desktopHeight;
+        margin-right: 1.5rem;
+      }
+    }
+  }
+}

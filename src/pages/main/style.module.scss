@@ -1,8 +1,15 @@
 @import 'shared/constants/vars';
 
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: $containerPaddingX;
+@media (min-width: $pageWidth320) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 $containerPaddingX;
+  }
+}
+@media (min-width: $pageWidth1440) {
+  .container {
+    padding: 0 $containerPaddingX;
+  }
 }

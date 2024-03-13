@@ -1,11 +1,15 @@
+import { useAppDispatch } from 'shared/api/redux/hooks';
 import styles from './style.module.scss';
 import { ConsultationButtonProps } from './types';
+import { sideMenuVisibleToggled } from 'shared/api/redux/slices/sideMenu';
 
 export function ConsultationButton(props: ConsultationButtonProps) {
+  const dispatch = useAppDispatch();
+
   const {
-    onClick,
     text: { mobile, desktop },
     type,
+    disabled,
   } = props;
 
   const handleClass = (defaultClass: string) => {
@@ -16,7 +20,8 @@ export function ConsultationButton(props: ConsultationButtonProps) {
     <button
       className={handleClass(styles.button)}
       type="button"
-      onClick={onClick}
+      disabled={disabled}
+      onClick={() => dispatch(sideMenuVisibleToggled())}
     >
       <div className={styles.textContainer}>
         <p className={styles.mobileText}>{mobile}</p>

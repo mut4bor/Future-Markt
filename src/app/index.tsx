@@ -8,14 +8,12 @@ import '@fontsource/raleway/500.css';
 import '@fontsource/raleway/700.css';
 import './index.scss';
 import { Suspense } from 'react';
-import { Header } from 'entities/header';
-import { MainPage } from 'pages';
+import { Routing } from 'pages';
 
 export function App() {
   return (
     <Suspense fallback={'Loading...'}>
-      <Header />
-      <MainPage />
+      <Routing />
     </Suspense>
   );
 }

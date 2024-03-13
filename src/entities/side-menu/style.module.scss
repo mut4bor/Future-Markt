@@ -1,0 +1,21 @@
+@import 'shared/constants/vars';
+
+@media (min-width: $pageWidth320) {
+  .container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background: #0f1d45;
+    padding: 2.6rem;
+    max-width: 60rem;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    transform: translateX(-100%);
+    &.visible {
+      transform: translateX(0);
+    }
+  }
+}

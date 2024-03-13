@@ -1,0 +1,14 @@
+@import 'shared/constants/vars';
+
+@media (min-width: $pageWidth320) {
+  .heading {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+@media (min-width: $pageWidth1440) {
+  .heading {
+    font-size: 5rem;
+    line-height: 7.5rem;
+  }
+}

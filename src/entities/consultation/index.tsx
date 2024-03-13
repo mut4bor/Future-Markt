@@ -3,17 +3,22 @@ import { ConsultationHeading } from './consultation-heading';
 import { ConsultationButton } from './consultation-button';
 import { ConsultationInfo } from './consultation-info';
 import mentor from 'shared/icons/mentor.png';
+import { useAppSelector } from 'shared/api/redux/hooks';
 
 export function Consultation() {
+  const { sideMenuVisible } = useAppSelector((state) => state.sideMenu);
+
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${sideMenuVisible ? styles.blur : ''}`}
+    >
+      <img className={styles.image} src={mentor} alt="Ментор" />
       <div className={styles.wrapper}>
         <div className={styles.consultation}>
           <ConsultationHeading />
           <div className={styles.buttons}>
             <ConsultationButton
               type="contained"
-              onClick={() => console.log('Записаться на консультацию')}
               text={{
                 mobile: 'Записаться',
                 desktop: 'Записаться на консультацию',
@@ -21,7 +26,6 @@ export function Consultation() {
             />
             <ConsultationButton
               type="outlined"
-              onClick={() => console.log('Бесплатная консультация')}
               text={{
                 mobile: 'Заказать звонок',
                 desktop: 'Бесплатная консультация',
@@ -47,7 +51,6 @@ export function Consultation() {
           />
         </div>
       </div>
-      <img className={styles.image} src={mentor} alt="Ментор" />
     </div>
   );
 }
