@@ -8,15 +8,17 @@
     width: 100%;
     height: 100%;
     position: relative;
-    padding: 4.5rem 0 10rem 0;
-    overflow: hidden;
+    padding: 4.5rem 0 5rem 0;
     transition: 0.3s ease-in-out;
+    height: calc(100vh - $headerHeight);
+    overflow-x: hidden;
     &.blur {
       filter: blur(1rem);
     }
   }
   .wrapper {
     width: 100%;
+    margin-top: auto;
   }
   .consultation {
     display: flex;
@@ -39,7 +41,7 @@
     position: absolute;
     z-index: -1;
     width: 27.5rem;
-    top: 10rem;
+    bottom: 0;
     left: 12.6rem;
     transition: 0.3s;
   }
@@ -56,8 +58,6 @@
     padding: 13.5rem 0 10rem 0;
   }
   .image {
-    top: unset;
-    bottom: 0rem;
     width: 38rem;
   }
   .wrapper {
@@ -86,8 +86,6 @@
     gap: 5.85rem;
   }
   .image {
-    top: unset;
-    bottom: 0rem;
     width: 52.5rem;
   }
   .info {

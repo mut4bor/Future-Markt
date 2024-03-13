@@ -1,6 +1,7 @@
 {
   "name": "future-markt",
   "version": "0.1.0",
+  "homepage": "https://mut4bor.github.io/Future-Markt",
   "private": true,
   "dependencies": {
     "@fontsource/montserrat": "^5.0.17",

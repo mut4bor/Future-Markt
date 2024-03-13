@@ -4,9 +4,23 @@ import { ConsultationButton } from './consultation-button';
 import { ConsultationInfo } from './consultation-info';
 import mentor from 'shared/icons/mentor.png';
 import { useAppSelector } from 'shared/api/redux/hooks';
+import { useGetDailyJsonQuery } from 'shared/api/redux/slices/apiSlice';
 
 export function Consultation() {
   const { sideMenuVisible } = useAppSelector((state) => state.sideMenu);
+  const { data } = useGetDailyJsonQuery();
+
+  const currentDate = new Date();
+
+  const year = currentDate.getFullYear();
+  const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+  const day = String(currentDate.getDate()).padStart(2, '0');
+
+  const formattedDate = Array.from(`${day}${month}${year}`);
+
+  const sumOfNumbers = formattedDate
+    .map((e) => parseFloat(e))
+    .reduce((acc, number) => acc + number);
 
   return (
     <div
@@ -36,14 +50,14 @@ export function Consultation() {
 
         <div className={styles.info}>
           <ConsultationInfo
-            heading="130+"
+            heading={`${sumOfNumbers}`}
             subheading={{
               mobile: 'техники',
               desktop: 'техник для достижения целей',
             }}
           />
           <ConsultationInfo
-            heading="250%"
+            heading={`${Math.round(data ? data.Valute['GBP'].Value : 0)}`}
             subheading={{
               mobile: 'продуктивности',
               desktop: `увеличение личной продуктивности`,
