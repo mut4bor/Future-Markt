@@ -1,8 +1,18 @@
-.link {
-  width: 9.8rem;
-  height: 3.4rem;
+@import 'shared/constants/vars';
+
+@media (min-width: $pageWidth320) {
+  .link {
+    width: 9.8rem;
+    height: 3.4rem;
+  }
+  .svg {
+    width: 100%;
+    height: 100%;
+  }
 }
-.svg {
-  width: 100%;
-  height: 100%;
+
+@media (min-width: $pageWidth768) {
+  .link {
+    width: 17rem;
+  }
 }
