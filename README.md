@@ -1,46 +1,77 @@
-# Getting Started with Create React App
+# Valantis Jewelry Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hi there! My name is Matvey Molchanov! This is a Future Markt repo for a job test task.
 
-## Available Scripts
+- [About the app](#about-the-app)
+- [Branches](#branches)
+- [Technology Stack](#technology-stack)
+- [System Requirements](#system-requirements)
+- [Setup](#setup)
+- [Running the app](#running-the-app)
 
-In the project directory, you can run:
+## About the app
 
-### `npm start`
+This app is a landing page, where you can schedule a phone call with mentor Alex Shevtsov.
+App based on a Feature Sliced Design, has fully adaptive design, works properly on mobiles, tablets and PCs
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Branches
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+This project has 2 branches:
 
-### `npm test`
+- main
+- gh-pages (branch to host this app on [GitHub Pages](https://pages.github.com/))
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technology Stack
 
-### `npm run build`
+- Typescript
+- React
+- Redux ToolKit
+- RTK Query
+- ESLint
+- Webpack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## System Requirements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [[node]](https://nodejs.org/en) v21.5.0 or greater
+- [[npm]](https://www.npmjs.com/) v10.2.4 or greater
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+All of these must be available in your `PATH`. To verify things are set up
+properly, you can run this:
 
-### `npm run eject`
+```
+node --version
+npm --version
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Setup
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+After you've made sure to have the correct things (and versions) installed, you
+should be able to just run a few commands to get set up:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+git clone https://github.com/mut4bor/Valantis.git
+cd ~/"Future Markt"
+npm i
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Before running the app, add your api url in the .env file like this:
 
-## Learn More
+```
+REACT_APP_API_URL=<your_api_url>
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running the app
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To get the app up and running (and really see if it worked), run:
+
+```shell
+npm start
+```
+
+Your browser should open up automatically to
+`http://localhost:3000/Future-Markt` (if it doesn't, just open that yourself) and you should
+be able to start messing around with the app.
+
+Here's what you should be looking at:
+
+<img src="docs/screenshot.png" alt="App Screenshot" title="App Screenshot" width="700" />
