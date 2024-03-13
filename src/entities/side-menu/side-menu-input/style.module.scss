@@ -10,13 +10,14 @@
     font-family: Montserrat, sans-serif;
     padding-bottom: 0.5rem;
     transition: 0.3s ease-in-out;
+    color: $whiteColor;
+
     &::placeholder {
       color: #ffffff80;
     }
     &:focus,
     &:hover {
-      color: #fff;
-      border-bottom: 0.1rem solid #ffffff;
+      border-bottom: 0.1rem solid $whiteColor;
     }
   }
 }

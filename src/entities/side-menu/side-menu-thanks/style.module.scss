@@ -1,0 +1,40 @@
+@import 'shared/constants/vars';
+
+@media (min-width: $pageWidth320) {
+  .thanks {
+    font-size: 3rem;
+    line-height: 4.7rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10rem;
+  }
+  .contact {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 10rem;
+  }
+  .svg {
+    margin-left: auto;
+    width: 10rem;
+    margin-top: auto;
+  }
+}
+@media (min-width: $pageWidth768) {
+  .thanks {
+    font-size: 5rem;
+    line-height: 7.9rem;
+    margin-top: 20rem;
+  }
+  .contact {
+    font-size: 4rem;
+    line-height: 6rem;
+    margin-top: 10rem;
+  }
+  .svg {
+    margin-left: auto;
+    width: 17rem;
+    margin-top: auto;
+  }
+}

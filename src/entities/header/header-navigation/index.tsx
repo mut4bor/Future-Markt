@@ -1,9 +1,18 @@
+import { useState } from 'react';
 import styles from './style.module.scss';
+import { SVG } from 'shared/ui';
 
 export function HeaderNavigation() {
+  const [toggleMobileNav, setToggleMobileNav] = useState(false);
+
   return (
     <nav className={styles.navigation}>
-      <button type="button" className={styles.toggleList}>
+      <button
+        onClick={() => setToggleMobileNav(true)}
+        type="button"
+        title="Навигация"
+        className={styles.toggleList}
+      >
         <svg className={styles.svg} viewBox="0 0 41 41" fill="none">
           <circle cx="20.2303" cy="20.2303" r="19.7303" stroke="white" />
           <g opacity="0.8">
@@ -23,7 +32,17 @@ export function HeaderNavigation() {
         </svg>
       </button>
 
-      <ul className={styles.list}>
+      <ul className={`${styles.list} ${toggleMobileNav ? styles.visible : ''}`}>
+        <li className={styles.cancelItem}>
+          <button
+            title="Отмена"
+            onClick={() => setToggleMobileNav(false)}
+            className={styles.cancel}
+            type="button"
+          >
+            <SVG svgClassName={styles.svg} href="#cross" />
+          </button>
+        </li>
         <li className={styles.itemWrapper}>
           <a className={styles.link} href="#">
             Обо мне

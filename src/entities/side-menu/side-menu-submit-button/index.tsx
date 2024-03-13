@@ -2,13 +2,14 @@ import styles from './style.module.scss';
 import { SideMenuSubmitButtonProps } from './types';
 
 export function SideMenuSubmitButton(props: SideMenuSubmitButtonProps) {
-  const { disabled } = props;
+  const { disabled, onClick } = props;
+
   return (
     <button
       className={styles.button}
-      type="button"
+      type="submit"
       disabled={disabled}
-      onClick={() => console.log('call')}
+      onClick={onClick}
     >
       <div className={styles.textContainer}>
         <p className={styles.text}>Заказать обратный звонок</p>

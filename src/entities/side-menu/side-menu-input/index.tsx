@@ -2,8 +2,14 @@ import { ConsultationInputProps } from './types';
 import styles from './style.module.scss';
 
 export function SideMenuInput(props: ConsultationInputProps) {
-  const { type, placeholder } = props;
+  const { type, placeholder, value, onChange } = props;
   return (
-    <input className={styles.input} type={type} placeholder={placeholder} />
+    <input
+      value={value}
+      onChange={onChange}
+      className={styles.input}
+      type={type}
+      placeholder={placeholder}
+    />
   );
 }

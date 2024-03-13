@@ -8,6 +8,9 @@
     height: 4.5rem;
     background: transparent;
     margin-top: 5rem;
+    &:disabled {
+      cursor: not-allowed;
+    }
   }
 
   .textContainer {
@@ -56,7 +59,7 @@
 }
 @media (min-width: $pageWidth1024) {
   .button {
-    &:hover {
+    &:hover:not(:disabled) {
       .textContainer {
         background: $whiteColor;
       }
