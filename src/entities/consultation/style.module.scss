@@ -10,10 +10,7 @@
     position: relative;
     padding: 4.5rem 0 10rem 0;
     overflow: hidden;
-    transition: 0.3s ease-in-out;
-    &.blur {
-      filter: blur(1rem);
-    }
+    @include blur;
   }
   .wrapper {
     width: 100%;
@@ -41,7 +38,7 @@
     width: 27.5rem;
     top: 10rem;
     left: 12.6rem;
-    transition: 0.3s;
+    @include transition;
   }
 }
 @media (min-width: $pageWidth425) {

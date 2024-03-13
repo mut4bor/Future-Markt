@@ -8,6 +8,7 @@
     align-items: center;
     height: $headerHeight;
     padding: 0 $containerPaddingX;
+    @include blur;
   }
   .container {
     display: flex;

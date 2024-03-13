@@ -1,3 +1,5 @@
+@import 'shared/constants/vars';
+
 .blur {
   position: fixed;
   top: 0;
@@ -6,5 +8,5 @@
   height: 100svh;
   z-index: 1;
   background: #0f1d4599;
-  transition: 0.3s ease-in-out;
+  @include transition;
 }

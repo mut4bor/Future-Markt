@@ -17,3 +17,14 @@ $containerPaddingX: 1.6rem;
 
 $lightBlueColor: #133456;
 $blueColor: #07305d;
+
+@mixin transition {
+  transition: 0.3s ease-in-out;
+}
+
+@mixin blur {
+  @include transition;
+  &.blur {
+    filter: blur(1rem);
+  }
+}
