@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Future-Markt/static/css/main.7af2fce5.css",
-    "main.js": "/Future-Markt/static/js/main.e8aa01ad.js",
+    "main.js": "/Future-Markt/static/js/main.6070b501.js",
     "static/js/453.afee64eb.chunk.js": "/Future-Markt/static/js/453.afee64eb.chunk.js",
     "static/media/background.png": "/Future-Markt/static/media/background.662ee315d8406f49aaf2.png",
     "static/media/mentor.png": "/Future-Markt/static/media/mentor.35bc1756469f8a7129f3.png",
@@ -88,11 +88,11 @@
     "index.html": "/Future-Markt/index.html",
     "static/media/checkmark.svg": "/Future-Markt/static/media/checkmark.293d74737c7c860718db.svg",
     "main.7af2fce5.css.map": "/Future-Markt/static/css/main.7af2fce5.css.map",
-    "main.e8aa01ad.js.map": "/Future-Markt/static/js/main.e8aa01ad.js.map",
+    "main.6070b501.js.map": "/Future-Markt/static/js/main.6070b501.js.map",
     "453.afee64eb.chunk.js.map": "/Future-Markt/static/js/453.afee64eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7af2fce5.css",
-    "static/js/main.e8aa01ad.js"
+    "static/js/main.6070b501.js"
   ]
 }
