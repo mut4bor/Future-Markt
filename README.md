@@ -1,4 +1,4 @@
-# Valantis Jewelry Store
+# Future Markt
 
 Hi there! My name is Matvey Molchanov! This is a Future Markt repo for a job test task.
 
@@ -49,7 +49,7 @@ After you've made sure to have the correct things (and versions) installed, you
 should be able to just run a few commands to get set up:
 
 ```
-git clone https://github.com/mut4bor/Valantis.git
+git clone https://github.com/mut4bor/Future-Markt.git
 cd ~/"Future Markt"
 npm i
 ```
