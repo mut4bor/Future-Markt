@@ -4,8 +4,8 @@
   .button {
     display: flex;
     flex-direction: row;
-    height: 3rem;
     width: 13rem;
+    height: 3rem;
     background: transparent;
     margin-top: 1rem;
     &.contained {
@@ -28,6 +28,73 @@
         }
       }
     }
+  }
+
+  .textContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border: 0.1rem solid $whiteColor;
+    border-right: 0;
+    transition: 0.3s ease-in-out;
+  }
+  .mobileText {
+    display: block;
+  }
+  .desktopText {
+    display: none;
+  }
+  .mobileText,
+  .desktopText {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    color: $whiteColor;
+  }
+  .hr {
+    min-width: 2px;
+    height: 100%;
+    background: $whiteColor;
+    transition: 0.3s ease-in-out;
+  }
+  .arrowContainer {
+    min-height: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 0.5rem;
+    border: 0.1rem solid $whiteColor;
+    border-left: 0;
+    transition: 0.3s ease-in-out;
+  }
+  .svg {
+    width: 0.8rem;
+    height: 0.8rem;
+    path {
+      stroke: $whiteColor;
+      stroke-width: 0.2rem;
+      transition: 0.3s ease-in-out;
+    }
+  }
+}
+@media (min-width: $pageWidth768) {
+  .button {
+    width: 48%;
+    height: 4rem;
+  }
+  .mobileText {
+    display: none;
+  }
+  .desktopText {
+    display: block;
+    font-size: 1.14rem;
+  }
+}
+@media (min-width: $pageWidth1024) {
+  .button {
     &:hover {
       .textContainer {
         background: $whiteColor;
@@ -69,62 +136,21 @@
       }
     }
   }
-
-  .textContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    border: 0.1rem solid $whiteColor;
-    border-right: 0;
-    transition: 0.3s ease-in-out;
+}
+@media (min-width: $pageWidth1440) {
+  .button {
+    height: 7rem;
   }
-  .mobileText {
+  .desktopText {
     display: block;
-  }
-  .desktopText {
-    display: none;
-  }
-  .mobileText,
-  .desktopText {
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.2rem;
-    color: $whiteColor;
-  }
-  .hr {
-    min-width: 2px;
-    height: 100%;
-    background: $whiteColor;
-    transition: 0.3s ease-in-out;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
   }
   .arrowContainer {
-    height: 100%;
-    aspect-ratio: 1;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    padding: 0.5rem;
-    border: 0.1rem solid $whiteColor;
-    border-left: 0;
-    transition: 0.3s ease-in-out;
+    padding: 1rem;
   }
   .svg {
-    width: 0.8rem;
-    height: 0.8rem;
-    path {
-      stroke: $whiteColor;
-      stroke-width: 0.2rem;
-      transition: 0.3s ease-in-out;
-    }
-  }
-}
-@media (min-width: $pageWidth1024) {
-  .mobileText {
-    display: none;
-  }
-  .desktopText {
-    display: block;
+    width: 2rem;
+    height: 2rem;
   }
 }

@@ -1,0 +1,70 @@
+@import 'shared/constants/vars';
+
+@media (min-width: $pageWidth320) {
+  .heading {
+    font-size: 2.5rem;
+    line-height: 3.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    width: 80%;
+  }
+
+  .subheading {
+    font-size: 1.1rem;
+    line-height: 1.65rem;
+    display: flex;
+    border-left: 0.2rem solid #ffffff60;
+    padding-left: 0.6rem;
+    color: #ffffff50;
+    font-weight: 400;
+    .desktopSubheadingText {
+      display: none;
+    }
+  }
+}
+@media (min-width: $pageWidth768) {
+  .heading {
+    font-size: 2.8rem;
+    line-height: 3.8rem;
+  }
+  .subheading {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    padding-left: 1rem;
+    .desktopSubheadingText {
+      display: block;
+    }
+    .mobileSubheadingText {
+      display: none;
+    }
+  }
+}
+@media (min-width: $pageWidth1024) {
+  .heading {
+    font-size: 3.2rem;
+    line-height: 4.35rem;
+  }
+  .subheading {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+
+    .desktopSubheadingText {
+      display: block;
+    }
+    .mobileSubheadingText {
+      display: none;
+    }
+  }
+}
+@media (min-width: $pageWidth1440) {
+  .heading {
+    font-size: 6.5rem;
+    line-height: 8.8rem;
+    font-weight: 600;
+    width: 90%;
+  }
+  .subheading {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}

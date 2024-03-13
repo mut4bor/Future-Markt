@@ -1,4 +1,5 @@
 import styles from './style.module.scss';
+import { ConsultationHeading } from './consultation-heading';
 import { ConsultationButton } from './consultation-button';
 import { ConsultationInfo } from './consultation-info';
 import mentor from 'shared/icons/mentor.png';
@@ -8,21 +9,7 @@ export function Consultation() {
     <div className={styles.container}>
       <div className={styles.wrapper}>
         <div className={styles.consultation}>
-          <h1 className={styles.heading}>
-            Создаю условия <br /> для вашего
-            <br /> успеха
-          </h1>
-          <h3 className={styles.subheading}>
-            <p className={styles.desktopSubheadingText}>
-              Когда ваше время и энергия лучше сфокусированы, стремление к новым
-              возможностям становится реальностью, ваш успех зависит от ваших
-              действий
-            </p>
-            <p className={styles.mobileSubheadingText}>
-              Ваш успех зависит от ваших <br /> действий
-            </p>
-          </h3>
-
+          <ConsultationHeading />
           <div className={styles.buttons}>
             <ConsultationButton
               type="contained"
@@ -55,7 +42,7 @@ export function Consultation() {
             heading="250%"
             subheading={{
               mobile: 'продуктивности',
-              desktop: 'увеличение личной продуктивности',
+              desktop: `увеличение личной продуктивности`,
             }}
           />
         </div>

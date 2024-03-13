@@ -25,11 +25,28 @@
     display: none;
   }
 }
-@media (min-width: $pageWidth1024) {
+@media (min-width: $pageWidth768) {
+  .container {
+    width: 48%;
+    padding-left: 1rem;
+  }
   .subheadingMobile {
     display: none;
   }
   .subheadingDesktop {
     display: block;
+  }
+}
+@media (min-width: $pageWidth1440) {
+  .container {
+    padding-left: 3rem;
+  }
+  .heading {
+    font-size: 4rem;
+    line-height: 5.6rem;
+  }
+  .subheadingDesktop {
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 }
