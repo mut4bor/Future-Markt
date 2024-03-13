@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Future-Markt/static/css/main.3593ac29.css",
+    "main.css": "/Future-Markt/static/css/main.aef0483e.css",
     "main.js": "/Future-Markt/static/js/main.0294c871.js",
     "static/js/453.afee64eb.chunk.js": "/Future-Markt/static/js/453.afee64eb.chunk.js",
     "static/media/background.png": "/Future-Markt/static/media/background.662ee315d8406f49aaf2.png",
@@ -87,12 +87,12 @@
     "static/media/montserrat-vietnamese-300-normal.woff2": "/Future-Markt/static/media/montserrat-vietnamese-300-normal.e24f3d852ead920f8a9a.woff2",
     "index.html": "/Future-Markt/index.html",
     "static/media/checkmark.svg": "/Future-Markt/static/media/checkmark.293d74737c7c860718db.svg",
-    "main.3593ac29.css.map": "/Future-Markt/static/css/main.3593ac29.css.map",
+    "main.aef0483e.css.map": "/Future-Markt/static/css/main.aef0483e.css.map",
     "main.0294c871.js.map": "/Future-Markt/static/js/main.0294c871.js.map",
     "453.afee64eb.chunk.js.map": "/Future-Markt/static/js/453.afee64eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3593ac29.css",
+    "static/css/main.aef0483e.css",
     "static/js/main.0294c871.js"
   ]
 }
