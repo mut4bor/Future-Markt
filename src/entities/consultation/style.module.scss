@@ -4,16 +4,19 @@
   .container {
     display: flex;
     flex-direction: row;
+    align-items: end;
     max-width: $containerWidth;
     width: 100%;
     height: 100%;
     position: relative;
-    padding: 4.5rem 0 10rem 0;
     overflow: hidden;
+    min-height: calc(100svh - $headerHeightMobile);
     @include blur;
   }
   .wrapper {
     width: 100%;
+    height: fit-content;
+    padding: 6.5rem 0 5rem 0;
   }
   .consultation {
     display: flex;
@@ -36,25 +39,19 @@
     position: absolute;
     z-index: -1;
     width: 27.5rem;
-    top: 10rem;
-    left: 12.6rem;
+    bottom: 0rem;
+    right: -9rem;
     @include transition;
   }
 }
 @media (min-width: $pageWidth425) {
   .image {
-    left: unset;
     right: 0;
   }
 }
 
 @media (min-width: $pageWidth768) {
-  .container {
-    padding: 13.5rem 0 10rem 0;
-  }
   .image {
-    top: unset;
-    bottom: 0rem;
     width: 38rem;
   }
   .wrapper {
@@ -67,13 +64,14 @@
     justify-content: space-between;
   }
 }
+
 @media (min-width: $pageWidth1440) {
   .container {
-    padding: 13.5rem 0 10rem 0;
     min-height: calc(100svh - $headerHeight);
   }
   .wrapper {
     width: 80.7rem;
+    padding: 13.5rem 0 4rem 0;
   }
   .consultation {
     display: flex;
@@ -83,8 +81,6 @@
     gap: 5.85rem;
   }
   .image {
-    top: unset;
-    bottom: 0rem;
     width: 52.5rem;
   }
   .info {

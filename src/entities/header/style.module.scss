@@ -6,21 +6,24 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: $headerHeight;
+    height: $headerHeightMobile;
     padding: 0 $containerPaddingX;
+    overflow: hidden;
     @include blur;
   }
   .container {
     display: flex;
     flex: 1 0 auto;
     justify-content: unset;
-
     align-items: center;
     font-size: 1.6rem;
     max-width: $containerWidth;
   }
 }
 @media (min-width: $pageWidth1024) {
+  .header {
+    height: $headerHeight;
+  }
   .container {
     justify-content: space-between;
   }

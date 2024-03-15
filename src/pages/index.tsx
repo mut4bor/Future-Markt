@@ -1,7 +1,8 @@
 import { store } from 'shared/api/redux/store';
 import { Provider } from 'react-redux';
-import { Header } from 'entities/header';
 import { MainPage } from './main';
+import { Header } from 'entities/header';
+
 export const Routing = () => {
   return (
     <Provider store={store}>
