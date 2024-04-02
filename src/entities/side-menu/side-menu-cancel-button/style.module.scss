@@ -4,8 +4,8 @@
   .cancel {
     width: 2rem;
     height: 2rem;
-    align-self: end;
-    justify-self: start;
+    align-self: flex-end;
+    justify-self: flex-start;
     background: transparent;
   }
   .svg {

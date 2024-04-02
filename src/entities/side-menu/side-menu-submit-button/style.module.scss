@@ -40,8 +40,8 @@
     min-height: 100%;
     aspect-ratio: 1;
     display: flex;
-    justify-content: end;
-    align-items: end;
+    justify-content: flex-end;
+    align-items: flex-end;
     padding: 0.5rem;
     border: 0.1rem solid $whiteColor;
     border-left: 0;
